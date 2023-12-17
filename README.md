@@ -1,7 +1,7 @@
 # triv-wrapped
 
 # author
-git : idrislabdev
+github : idrislabdev
 linkedin: https://www.linkedin.com/in/muhammad-rifai-idris/
 instagram: https://www.instagram.com/puang.pii/
 
