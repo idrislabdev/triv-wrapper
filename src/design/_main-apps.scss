@@ -1,0 +1,266 @@
+.main-apps {
+    height: 100%;
+    width: 100%;
+    background-color: $primary;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    .triv-logo {
+        position: absolute;
+        top: 28px;
+        right: 27px;
+        width: 86px;
+        height: 28.44px;
+    }
+    .text-page {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        opacity: 0;
+        
+        h5 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 38px;
+            letter-spacing: 0em;
+            margin-bottom: 0px;
+            color: $white;
+            span {
+                color: #FFBF41;
+            }
+        }
+        p {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 38px;
+            letter-spacing: 0em;
+            margin-bottom: 0px;
+            color: $white;
+            span {
+                color: #FFBF41;
+            }
+        }
+
+        label {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 34px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-bottom: 0px;
+            color: #FFBF41;
+        }
+    }
+
+    .cloud-bottom {
+        position: absolute;
+        opacity: 0;
+        &__left {
+            bottom: -17px;
+            left: 45%;
+        }
+        &__right {
+            bottom: -17px;
+            right: 35%;
+        }
+    }
+   
+    button {
+        position: absolute;
+        bottom: 40px;
+        opacity: 0;
+        z-index: 2;
+    }
+}
+
+@for $i from 0 through 500 {
+    .fade-in-animate-#{$i}s {
+        animation: fadeIn #{$i}s;
+        -webkit-animation: fadeIn #{$i}s;
+        -moz-animation: fadeIn #{$i}s;
+        -o-animation: fadeIn #{$i}s;
+        -ms-animation: fadeIn #{$i}s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .fade-in-right-animate-#{$i}s {
+        animation: fadeInRight #{$i}s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .fade-in-left-animate-#{$i}s {
+        animation: fadeInLeft #{$i}s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .fade-in-left-animate-#{$i}ms {
+        animation: fadeInLeft #{$i}ms ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .fade-in-bottom-animate-#{$i}s {
+        animation: fadeInBottom #{$i}s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .fade-in-top-animate-#{$i}s {
+        animation: fadeInTop #{$i}s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .fade-out-bottom-animate-#{$i}s {
+        animation: fadeOutBottom #{$i}s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .fade-out-animate-#{$i}s {
+        animation: fadeOut #{$i}s;
+        -webkit-animation: fadeOut #{$i}s;
+        -moz-animation: fadeOut #{$i}s;
+        -o-animation: fadeOut #{$i}s;
+        -ms-animation: fadeOut #{$i}s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .fade-out-animate-#{$i}ms {
+        animation: fadeOut #{$i}ms;
+        -webkit-animation: fadeOut #{$i}ms;
+        -moz-animation: fadeOut #{$i}ms;
+        -o-animation: fadeOut #{$i}ms;
+        -ms-animation: fadeOut #{$i}ms;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .animation-delay-#{$i}s {
+        -webkit-animation-delay: #{$i}s;
+        animation-delay: #{$i}s;
+    }
+}
+
+.dissapear-right {
+    animation: diagonal-move-right 300ms linear alternate;
+}
+
+
+.dissapear-left {
+    animation: diagonal-move-left 400ms linear alternate;
+}
+
+
+
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    // 80% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBackgroundAward {
+    from {
+        transform: translateX(-2000px);
+    }
+    to {
+        background-color: $white;
+    }
+}
+
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+
+@keyframes fadeOutBottom {
+    from {
+        opacity: 1;
+        transform: translateY(10%);
+    }
+    to { 
+        opacity: 0;
+        transform: translateY(50%);
+
+    }
+}
+
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(10%);
+    }
+}
+
+@keyframes diagonal-move-right {
+    from {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(300px) translateY(500px);
+    }
+}
+
+@keyframes diagonal-move-left {
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-1000px) translateY(500px);
+    }
+}
+
+
+

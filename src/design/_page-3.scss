@@ -1,0 +1,183 @@
+.main-apps {
+    &.page-3 {
+        .triv-logo {
+            &.entrance {
+                animation: fadeIn 3s;
+                -webkit-animation: fadeIn 3s;
+                -moz-animation: fadeIn 3s;
+                -o-animation: fadeIn 3s;
+                -ms-animation: fadeIn 3s;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-delay: 0s;
+            }
+        }
+        .page-3-area {
+            height: 100%;
+            position: relative;
+            padding: 150px 35px;
+            .text-page {
+                &.entrance {
+                    animation: textPageEntrance 2s ease-in-out;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0s;
+                }
+                &.exit {
+                    animation: fadeOut 400ms;
+                    -webkit-animation: fadeOut 400ms;
+                    -moz-animation: fadeOut 400ms;
+                    -o-animation: fadeOut 400ms;
+                    -ms-animation: fadeOut 400ms;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                }
+                .text-greeting {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 13px;
+                    align-items: center;
+                    &__name {
+                        gap: 0px;
+                    }
+                }
+                .text-award {
+                    width: 223px;
+                    height: 64px;
+                    position: relative;
+                    overflow: hidden;
+                    opacity: 0;
+
+                    &.entrance {
+                        animation: textAwardEntrance 1s ease-in-out;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                        animation-delay: 1s;
+                    }
+
+                    .wrap {
+                        position: absolute;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 64px;
+                        background: #FFBF41;
+                        color: $white;
+                        left: 0px;
+                        &.exit {
+                            -webkit-animation: slideOut 0.5s forwards;
+                            -webkit-animation-delay: 5ms;
+                            animation: slideOut 0.5s forwards;
+                            animation-delay: 5ms;
+                        }
+                    }
+                    label {
+                        color: $white;
+                        position: absolute;
+                        left: 0;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 100%;
+                        &.exit {
+                            animation: fadeOut 400ms;
+                            -webkit-animation: fadeOut 400ms;
+                            -moz-animation: fadeOut 400ms;
+                            -o-animation: fadeOut 400ms;
+                            -ms-animation: fadeOut 400ms;
+                            -webkit-animation-fill-mode: forwards;
+                            animation-fill-mode: forwards;
+                            animation-delay: 5s;
+                        }
+                    }
+                }
+                p {
+                    opacity: 0;
+                }
+            }
+        
+            .air-ballon {
+                position: absolute;
+                bottom: 30px;
+                z-index: 1;
+                opacity: 0;
+                &.entrance {
+                    animation: airBallonEntrance 1s ease-in-out;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                    animation-delay: 1s;
+                }
+                &.exit {
+                    animation: fadeOutBottom 1s ease-in-out;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                }
+                
+            }
+
+        }
+
+                
+        .cloud-bottom {
+            opacity: 1;
+        }   
+
+        button {
+            &.entrance {
+                animation: buttonEntrance 1s ease-in-out;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-delay: 2s;
+            }
+            &.exit {
+                animation: fadeOut 400ms;
+                -webkit-animation: fadeOut 400ms;
+                -moz-animation: fadeOut 400ms;
+                -o-animation: fadeOut 400ms;
+                -ms-animation: fadeOut 400ms;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes slideOut {
+    100% { left: -223px; }
+}
+
+@keyframes textPageEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+
+@keyframes textAwardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+
+@keyframes airBallonEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(10%);
+    }
+}
+
+
+

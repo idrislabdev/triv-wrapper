@@ -1,0 +1,25 @@
+.btn {
+    &__light {
+        background-color: $white;
+        border-radius: 28px;
+        width: 101px;
+        color: $primary;
+
+        &:focus, &:hover {
+            background-color: $white !important;
+            color: $primary;
+        }
+    }
+
+    &__primary {
+        background-color: $primary;
+        border-radius: 28px;
+        width: 101px;
+        color: $white;
+
+        &:focus, &:hover {
+            background-color: $primary !important;
+            color: $white;
+        }
+    }
+}

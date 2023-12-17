@@ -1,0 +1,208 @@
+.main-apps {
+    &.page-2 {
+        .triv-logo {
+            &.entrance {
+                animation: fadeIn 3s;
+                -webkit-animation: fadeIn 3s;
+                -moz-animation: fadeIn 3s;
+                -o-animation: fadeIn 3s;
+                -ms-animation: fadeIn 3s;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-delay: 0s;
+            }
+        }
+        .page-2-area {
+            height: 100%;
+            position: relative;
+            padding: 150px 35px;
+            .text-page {
+                &.entrance {
+                    animation: entranceTextPage 1s ease-in-out;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0s;
+                }
+                &.exit {
+                    animation: fadeOut 400ms;
+                    -webkit-animation: fadeOut 400ms;
+                    -moz-animation: fadeOut 400ms;
+                    -o-animation: fadeOut 400ms;
+                    -ms-animation: fadeOut 400ms;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                }
+
+                .text-greeting {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 13px;
+                    align-items: center;
+                    &__name {
+                        gap: 0px;
+                    }
+                }
+                .text-award {
+                    padding: 14px 20px;
+                    background-color: $white;
+                    width: 263px;
+                    opacity: 0;
+                    
+                    &.entrance {
+                        animation: fadeIn 1s;
+                        -webkit-animation: fadeIn 1s;
+                        -moz-animation: fadeIn 1s;
+                        -o-animation: fadeIn 1s;
+                        -ms-animation: fadeIn 1s;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                        animation-delay: 2s;
+                    }
+
+                    label {
+                        opacity: 0;
+                        &.entrance {
+                            animation: entranceTextAwardLabel 1s ease-in-out;
+                            -webkit-animation-fill-mode: forwards;
+                            animation-fill-mode: forwards;
+                            animation-delay: 2s;
+                        }
+                    }
+                }
+                p {
+                    opacity: 0;
+                    &.entrance {
+                        animation: fadeIn 2s;
+                        -webkit-animation: fadeIn 2s;
+                        -moz-animation: fadeIn 2s;
+                        -o-animation: fadeIn 2s;
+                        -ms-animation: fadeIn 2s;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                        animation-delay: 3s;
+                    }
+                }
+            }
+        
+            img {
+                &.plane {
+                    position: absolute;
+                    bottom: 20%;
+                    &.entrance {
+                        animation: planeMove 300ms linear alternate;
+                        animation-delay: 3000ms;
+                        opacity: 0;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                    }
+        
+                    &.exit {
+                        animation: planeTakeOff 300ms linear alternate;
+                        animation-fill-mode: forwards;
+                    }
+                }
+            }
+            
+        }
+
+        .cloud-bottom {
+            &__left {
+                &.entrance {
+                    animation: cloudEntranceLeft 1s ease-in-out;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+               }
+            }
+            &__right {
+               &.entrance {
+                    animation: cloudEntranceRight 1s ease-in-out;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+               }
+            }
+        }
+
+        button {
+            &.entrance {
+                animation: buttonEntrance 1s ease-in-out;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-delay: 4s;
+            }
+
+            &.exit {
+                animation: fadeOut 400ms;
+                -webkit-animation: fadeOut 400ms;
+                -moz-animation: fadeOut 400ms;
+                -o-animation: fadeOut 400ms;
+                -ms-animation: fadeOut 400ms;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+            
+        }
+    }
+}
+@keyframes entranceTextPage {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+
+@keyframes entranceTextAwardLabel {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+
+@keyframes planeMove {
+    from {
+        opacity: 1;
+        transform: translateX(-100px) translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+@keyframes planeTakeOff {
+    from {
+        opacity: 1;
+        transform: translateX(0px) translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(200%) translateY(-50px);
+    }
+}
+
+@keyframes cloudEntranceRight {
+    from {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cloudEntranceLeft {
+    from {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    to {
+        opacity: 1;
+    }
+}
