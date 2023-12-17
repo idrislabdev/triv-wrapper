@@ -5,6 +5,18 @@
         width: 101px;
         color: $primary;
 
+        &__next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            &::after {
+                content: url("../assets/arrow-right-blue.png");
+                width: 17px;
+                height: 18px;
+            }
+        }
+
         &:focus, &:hover {
             background-color: $white !important;
             color: $primary;
@@ -16,6 +28,18 @@
         border-radius: 28px;
         width: 101px;
         color: $white;
+
+        &__next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            &::after {
+                content: url("../assets/arrow-right-white.png");
+                width: 17px;
+                height: 18px;
+            }
+        }
 
         &:focus, &:hover {
             background-color: $primary !important;

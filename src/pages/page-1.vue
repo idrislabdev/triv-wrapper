@@ -9,7 +9,7 @@
         <img alt="Triv logo" src="../assets/cloud-left.png" class="cloud cloud__left entrance">
         <img alt="Triv logo" src="../assets/cloud-right.png" class="cloud cloud__right entrance">
       </div>
-      <button type="button" class="btn btn__light entrance" @click="goToPage">Mulai</button>
+      <button type="button" class="btn btn__light btn__light__next entrance" @click="goToPage">Mulai</button>
     </div>
 </template>
 <script>

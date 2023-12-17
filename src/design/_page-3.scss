@@ -13,7 +13,7 @@
             }
         }
         .page-3-area {
-            height: 100%;
+            height: 100vh;
             position: relative;
             padding: 150px 35px;
             .text-page {
@@ -99,9 +99,9 @@
             }
         
             .air-ballon {
-                position: absolute;
+                position: fixed;
                 bottom: 30px;
-                z-index: 1;
+                z-index: 3;
                 opacity: 0;
                 &.entrance {
                     animation: airBallonEntrance 1s ease-in-out;

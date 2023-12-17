@@ -1,0 +1,78 @@
+.coin-fly {
+    .coin-fly-body {
+        width: 74px;
+        height: 35.64px;
+        position: relative;
+        animation: moveCoin 2s infinite;
+        // animation-delay: 4s;
+        .coin {
+            background-image: url("../assets/coin.png");
+            width: 39.45px;
+            height: 39.45px;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 23%;
+            z-index: 1;
+    
+        }
+        .left-wing {
+            background-image: url("../assets/coin-wing-left.png");
+            width: 29.44px;
+            height: 21.13px;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            top: 10%;
+            animation: leftWing 2s infinite;
+            // animation-delay: 1s;
+    
+        }
+        .right-wing {
+            background-image: url("../assets/coin-wing-right.png");
+            width: 29.44px;
+            height: 21.13px;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 0;
+            top: 10%;
+            animation: rightWing 2s infinite;
+            // animation-delay: 1s;
+    
+        }
+    }
+    .coin-smoke {
+        background-image: url("../assets/coin-smoke.png");
+        width: 39.45px;
+        height: 39.45px;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 15%;
+        z-index: 1;
+        bottom: -90%;
+        animation: smokeFadeIn 2s infinite;
+        animation-delay: 2s;
+        opacity: 0;
+    }
+}
+
+@keyframes leftWing {
+    10% {transform: rotate(40deg);}
+}
+
+@keyframes rightWing {
+    10% {transform: rotate(-40deg);}
+}
+
+@keyframes moveCoin {
+    to { 
+        opacity: 1;
+        transform: translateY(-30%);
+    }
+}
+
+@keyframes smokeFadeIn {
+    0% { opacity:0; }
+    // 80% { opacity:0; }
+    // 90% { opacity:1; }
+    100% { opacity:1; }
+}

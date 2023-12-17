@@ -1,5 +1,6 @@
 <template>
     <div class="main-apps page-2">
+      <coin-fly />
       <img alt="Triv logo" src="../assets/logo-triv.png" class="triv-logo entrance">
       <div class="page-2-area">
         <div class="text-page entrance">
@@ -16,16 +17,18 @@
         </div>
         <img alt="Plane Img" src="../assets/plane.png" class="plane entrance">     
       </div>
-      <button type="button" class="btn btn__primary entrance" @click="goToPage">lanjut</button>
+      <button type="button" class="btn btn__primary btn__primary__next entrance" @click="goToPage">lanjut</button>
       <img alt="Triv logo" src="../assets/cloud-right.png" class="cloud-bottom cloud-bottom__right entrance">
       <img alt="Triv logo" src="../assets/cloud-left.png" class="cloud-bottom cloud-bottom__left entrance">   
     </div>
 </template>
 <script>
+import CoinFly from '@/components/CoinFly.vue'
+
 export default {
   name: 'HomePage',
   components: {
-  
+    CoinFly
   },
   methods: {
     goToPage() {

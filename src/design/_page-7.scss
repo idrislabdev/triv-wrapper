@@ -1,0 +1,176 @@
+.main-apps {
+    &.page-7 {
+        background-color: #CEEAF0;
+        .triv-logo {
+            &.entrance {
+                animation: logoEntrance 1s ease-in-out;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-delay: 0s;
+            }
+        }
+        .page-7-area {
+            height: 100vh;
+            position: relative;
+            padding: 150px 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            align-items: center;
+            .text-page {
+                opacity: 0;
+                h5 {
+                    font-size: 20px;
+                    line-height: 32px;
+                    font-weight: 700;
+                    color: #040518;
+                }
+                &.entrance {
+                    animation: textGreetingEntrance 1s ease-in-out;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0s;
+                }
+                &.exit {
+                    animation: fadeOut 400ms;
+                    -webkit-animation: fadeOut 400ms;
+                    -moz-animation: fadeOut 400ms;
+                    -o-animation: fadeOut 400ms;
+                    -ms-animation: fadeOut 400ms;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .asset-page {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                .asset-type {
+                    display: flex;
+                    background-color: $white;
+                    border-radius: 8px;
+                    padding: 12px;
+                    width: 280px;
+                    gap: 12px;
+                    align-self: center;
+                    opacity: 0;
+                    .asset-img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .asset-text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        label {
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 21px;
+                            letter-spacing: 0em;
+                            margin-bottom: 0px;
+                            color: #333333;
+                        }
+                        p {
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 18px;
+                            letter-spacing: 0em;
+                            margin-bottom: 0px;
+                            color: #828282;
+                        }
+                    }
+                    &.entrance {
+                        animation: assetEntrance 1s ease-in-out;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                    }
+                }
+                &.exit {
+                    animation: fadeOut 400ms;
+                    -webkit-animation: fadeOut 400ms;
+                    -moz-animation: fadeOut 400ms;
+                    -o-animation: fadeOut 400ms;
+                    -ms-animation: fadeOut 400ms;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                }
+                
+            }
+        
+        }
+
+        .cloud-top {
+            position: absolute;
+            opacity: 1;
+            &__left {
+                top: -10vh;
+                left: 45%;
+            }
+            &__right {
+                top: -8vh;
+                right: 35%;
+            }
+        }
+
+        .coins-bg {
+            position: fixed;
+            opacity: 0;
+            bottom: 0;
+            &.entrance {
+                animation: assetEntrance 1s ease-in-out;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        button {
+            &.entrance {
+                animation: buttonEntrance 1s ease-in-out;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-delay: 4s;
+            }
+            &.exit {
+                animation: fadeOut 400ms;
+                -webkit-animation: fadeOut 400ms;
+                -moz-animation: fadeOut 400ms;
+                -o-animation: fadeOut 400ms;
+                -ms-animation: fadeOut 400ms;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+        }        
+
+    }
+
+
+}
+@keyframes logoEntrance {
+    from {
+        opacity: 0;
+        transform: translateX(-50vh);
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes textGreetingEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+
+@keyframes assetEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+

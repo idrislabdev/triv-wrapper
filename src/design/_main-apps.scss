@@ -1,5 +1,5 @@
 .main-apps {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-color: $primary;
 
@@ -10,11 +10,16 @@
 
     position: fixed;
     .triv-logo {
-        position: absolute;
+        position: fixed;
         top: 28px;
         right: 27px;
         width: 86px;
         height: 28.44px;
+    }
+    .coin-fly {
+        position: fixed;
+        left: 27px;
+        top: 28px;
     }
     .text-page {
         text-align: center;
@@ -58,23 +63,24 @@
     }
 
     .cloud-bottom {
-        position: absolute;
+        position: fixed;
         opacity: 0;
+        z-index: 2;
         &__left {
-            bottom: -17px;
+            bottom: -20px;
             left: 45%;
         }
         &__right {
-            bottom: -17px;
+            bottom: -20px;
             right: 35%;
         }
     }
    
     button {
-        position: absolute;
-        bottom: 40px;
+        position: fixed;
+        bottom: 50px;
         opacity: 0;
-        z-index: 2;
+        z-index: 4;
     }
 }
 
@@ -146,8 +152,8 @@
     }
 
     .animation-delay-#{$i}s {
-        -webkit-animation-delay: #{$i}s;
-        animation-delay: #{$i}s;
+        -webkit-animation-delay: #{$i}s !important;
+        animation-delay: #{$i}s !important;
     }
 }
 

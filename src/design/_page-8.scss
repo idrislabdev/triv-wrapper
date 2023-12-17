@@ -1,0 +1,280 @@
+.main-apps {
+    &.page-8 {
+        background-color: #CEEAF0;
+        .triv-logo {
+            opacity: 1;
+            &.exit {
+                animation: fadeOut 400ms;
+                -webkit-animation: fadeOut 400ms;
+                -moz-animation: fadeOut 400ms;
+                -o-animation: fadeOut 400ms;
+                -ms-animation: fadeOut 400ms;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+        }
+        .page-8-area {
+            height: 100vh;
+            position: relative;
+            padding: 150px 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            align-items: center;
+            .text-page {
+                opacity: 0;
+                h5 {
+                    font-size: 20px;
+                    line-height: 32px;
+                    font-weight: 700;
+                    color: #040518;
+                }
+                label {
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 51px;
+                    color: $primary;
+                }
+                &.entrance {
+                    animation: fadeIn 2s ease-in-out;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0s;
+                }
+                &.exit {
+                    animation: fadeOut 400ms;
+                    -webkit-animation: fadeOut 400ms;
+                    -moz-animation: fadeOut 400ms;
+                    -o-animation: fadeOut 400ms;
+                    -ms-animation: fadeOut 400ms;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .text-page-award {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+                h5 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 32px;
+                    opacity: 0;
+                    margin-bottom: 0px;
+                    &.entrance {
+                        animation: fadeIn 2s;
+                        -webkit-animation: fadeIn 2s;
+                        -moz-animation: fadeIn 2s;
+                        -o-animation: fadeIn 2s;
+                        -ms-animation: fadeIn 2s;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                        animation-delay: 1s;
+                    }
+                }
+                .text-award {
+                    width: 270px;
+                    height: 64px;
+                    position: relative;
+                    overflow: hidden;
+                    .wrap {
+                        position: absolute;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 64px;
+                        background-color: #008EFF;
+                        &.entrance {
+                            left: -270px;
+                            -webkit-animation: textWrapEntrance 1s forwards;
+                            -webkit-animation-delay: 1s;
+                            animation: textWrapEntrance 1s forwards;
+                            animation-delay: 1s;
+                        }
+                    }
+                    label {
+                        opacity: 0;
+                        position: absolute;
+                        color: $white;
+                        font-size: 32px;
+                        font-weight: 700;
+                        line-height: 48px;
+                        margin-bottom: 0px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        width: 100%;
+                        padding: 8px 16px;
+                        &.entrance {
+                            animation: fadeIn 2s;
+                            -webkit-animation: fadeIn 2s;
+                            -moz-animation: fadeIn 2s;
+                            -o-animation: fadeIn 2s;
+                            -ms-animation: fadeIn 2s;
+                            -webkit-animation-fill-mode: forwards;
+                            animation-fill-mode: forwards;
+                            animation-delay: 2s;
+                        }
+                    }
+                }
+                .text-quote {
+                    opacity: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 16px;
+                    .double-quote {
+                        background-image: url("../assets/double-quote.png");
+                        width: 23px;
+                        height: 17px;
+                    }
+                    p {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 22px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        margin-bottom: 0px;
+                        span {
+                            font-weight: 500;
+                        }
+                    }
+                    &.entrance {
+                        animation: fadeIn 2s;
+                        -webkit-animation: fadeIn 2s;
+                        -moz-animation: fadeIn 2s;
+                        -o-animation: fadeIn 2s;
+                        -ms-animation: fadeIn 2s;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                        animation-delay: 2s;
+                    }
+                    &.exit {
+                        animation: fadeOut 400ms;
+                        -webkit-animation: fadeOut 400ms;
+                        -moz-animation: fadeOut 400ms;
+                        -o-animation: fadeOut 400ms;
+                        -ms-animation: fadeOut 400ms;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                    }
+                }
+                &.exit {
+                    animation: fadeOut 400ms;
+                    -webkit-animation: fadeOut 400ms;
+                    -moz-animation: fadeOut 400ms;
+                    -o-animation: fadeOut 400ms;
+                    -ms-animation: fadeOut 400ms;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                }
+            }
+
+        
+        }
+
+        .cloud-top {
+            position: absolute;
+            opacity: 1;
+            &__left {
+                top: -10vh;
+                left: 45%;
+                &.exit {
+                    animation: fadeOut 400ms;
+                    -webkit-animation: fadeOut 400ms;
+                    -moz-animation: fadeOut 400ms;
+                    -o-animation: fadeOut 400ms;
+                    -ms-animation: fadeOut 400ms;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                }
+            }
+            &__right {
+                top: -8vh;
+                right: 35%;
+                &.exit {
+                    animation: fadeOut 400ms;
+                    -webkit-animation: fadeOut 400ms;
+                    -moz-animation: fadeOut 400ms;
+                    -o-animation: fadeOut 400ms;
+                    -ms-animation: fadeOut 400ms;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                }
+            }
+            
+        }
+
+        .coins-bg {
+            position: fixed;
+            opacity: 1;
+            bottom: 0;
+            &.exit {
+                animation: fadeOut 400ms;
+                -webkit-animation: fadeOut 400ms;
+                -moz-animation: fadeOut 400ms;
+                -o-animation: fadeOut 400ms;
+                -ms-animation: fadeOut 400ms;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        button {
+            &.entrance {
+                animation: buttonEntrance 1s ease-in-out;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-delay: 3s;
+            }
+            &.exit {
+                animation: fadeOut 400ms;
+                -webkit-animation: fadeOut 400ms;
+                -moz-animation: fadeOut 400ms;
+                -o-animation: fadeOut 400ms;
+                -ms-animation: fadeOut 400ms;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+        }        
+
+    }
+
+
+}
+@keyframes logoEntrance {
+    from {
+        opacity: 0;
+        transform: translateX(-50vh);
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes textGreetingEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+
+@keyframes assetEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+
+@keyframes textWrapEntrance {
+    100% { left: 0; }
+}
+

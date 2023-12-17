@@ -62,8 +62,8 @@
                         animation-delay: 2s;
         
                     }
-                    &.eixit {
-                        animation: cloudRightExit 300ms linear alternate;
+                    &.exit {
+                        animation: cloudRightExit 500ms linear alternate;
                     }
                 }
                 &__right {
@@ -154,7 +154,7 @@
 
     to {
         opacity: 1;
-        transform: translateX(300px) translateY(500px);
+        transform: translateX(100vh) translateY(500px);
     }
 }
 
@@ -167,6 +167,6 @@
 
     to {
         opacity: 1;
-        transform: translateX(-1000px) translateY(500px);
+        transform: translateX(-100vh) translateY(500px);
     }
 }
