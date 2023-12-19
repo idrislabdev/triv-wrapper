@@ -7,7 +7,7 @@
           <div class="text-greeting">
             <div class="text-greeting text-greeting__name">
               <h5><span>Farizky</span></h5>
-              <h5>Anda telah melakukan trading besar</h5>
+              <h5>Anda telah melakukan trading sebesar</h5>
             </div>
             <div class="text-award">
               <label class="label-award">Rp103.000.000</label>
