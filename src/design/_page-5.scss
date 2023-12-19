@@ -1,5 +1,6 @@
 .main-apps {
     &.page-5 {
+        background-color: #000;
         .triv-logo {
             &.entrance {
                 animation: fadeIn 3s;
@@ -15,14 +16,23 @@
         .page-5-area {
             height: 100vh;
             position: relative;
-            padding: 150px 35px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
+            justify-content: space-around;
             align-items: center;
+            background-color: $primary;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
-                display: flex;
-                gap: 0px;
+                padding: 0px 15px;
                 align-items: center;
+                z-index: 5;
+                margin-top: -75px;
+                @media #{$extra-small-mobile} {
+                   gap: 8px;
+                }
                 &.entrance {
                     animation: textPageEntrance 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;
@@ -42,6 +52,9 @@
                     font-size: 24px;
                     line-height: 38px;
                     font-weight: 600;
+                    @media #{$extra-small-mobile} {
+                        line-height: 24px;
+                    }
                 }
                 .text-greeting {
                     display: flex;
@@ -66,6 +79,11 @@
                         color: #04C800;
                         -webkit-text-stroke-color: $white;
                         -webkit-text-stroke-width: 2px;
+
+                        @media #{$extra-small-mobile} {
+                            line-height: 48px;
+                            line-height: 60px;
+                        }
                     }
                     span {
                         font-size: 20px;
@@ -99,11 +117,15 @@
             .graph {
                 z-index: 1;
                 opacity: 0;
-                width: 193px;
-                height: 208px;
-                margin-top: -25px;
+                width: 190px;
+                height: 180px;
+                // margin-top: -25px;
                 // position: absolute;
                 // top: 160px;
+                @media #{$extra-small-mobile} {
+                    width: 150px;
+                    height: 140px;
+                }
                 &.entrance {
                     animation: graphEntrance 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;
@@ -118,10 +140,10 @@
             }
         
             .kites {
+                position: absolute;
+                // bottom: 20%;
                 z-index: 3;
                 opacity: 0;
-                width: 231px;
-                position: fixed;
                 bottom: 0;
                 &.entrance {
                     animation: kiteEntrance 900ms linear alternate;
@@ -142,8 +164,16 @@
 
         .cloud-bottom {
             opacity: 1;
-        }   
+            position: absolute;
 
+            &__left {
+                height: 146px;
+            }
+            &__right {
+                height: 130px;
+            }
+        }  
+        
         button {
             &.entrance {
                 animation: buttonEntrance 1s ease-in-out;

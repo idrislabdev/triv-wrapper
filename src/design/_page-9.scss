@@ -1,5 +1,6 @@
 .main-apps {
     &.page-9 {
+        background-color: #000;
         .triv-logo {
             &.entrance {
                 animation: fadeIn 3s;
@@ -15,9 +16,27 @@
         .page-9-area {
             height: 100vh;
             position: relative;
-            padding: 150px 35px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary;
+            gap: 28px;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
                 opacity: 1;
+                margin-top: -100px;
+                @media #{$large-mobile} {
+                    width: 100vw;
+                }
+                @media #{$extra-small-mobile} {
+                    margin-top: -200px;
+                    padding: 0px 50px;
+
+                }
                 .text-greeting {
                     display: flex;
                     flex-direction: column;
@@ -92,10 +111,15 @@
             }
         
             .air-ballons {
-                position: fixed;
+                position: absolute;
                 bottom: 50px;
                 z-index: 3;
                 opacity: 0;
+                height: 260px;
+                @media #{$extra-small-mobile} {
+                    height: 208px;
+
+                }
                 &.entrance {
                     animation: airBallonsEntrance 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;
@@ -112,7 +136,9 @@
         }
 
         .cloud-bottom {
+            position: absolute;
             &__left {
+                height: 146px;
                 &.entrance {
                     animation: cloudEntranceLeft 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;
@@ -120,6 +146,7 @@
                }
             }
             &__right {
+                height: 130px;
                &.entrance {
                     animation: cloudEntranceRight 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;

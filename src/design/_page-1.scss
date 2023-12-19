@@ -1,6 +1,10 @@
 .main-apps {
     &.page-1 {
+        background-color: #000;
         .triv-logo {
+            @media #{$extra-small-mobile} {
+                // right: 70px;
+            }
             &.entrance {
                 animation: fadeIn 3s;
                 -webkit-animation: fadeIn 3s;
@@ -23,9 +27,18 @@
         }
         .page-1-area {
             position: relative;
-            padding: 150px 35px;
-        
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $primary;
+            align-items: center;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
+                padding: 0px 15px;
                 &.entrance {
                     animation: fadeIn 2s;
                     -webkit-animation: fadeIn 2s;
@@ -53,8 +66,9 @@
                 position: absolute;
                 opacity: 0;
                 &__left {
-                    top: 0;
+                    top: 10vh;
                     right: 65%;
+                    height: 146px;
                     &.entrance {
                         animation: cloudLeftEntrance 2s ease-in-out;
                         -webkit-animation-fill-mode: forwards;
@@ -67,8 +81,10 @@
                     }
                 }
                 &__right {
-                    bottom: 0;
+                    bottom: 20vh;
                     left: 65%;
+                    height: 130px;
+
                     &.entrance {
                         animation: cloudRightEntrance 2s ease-in-out;
                         -webkit-animation-fill-mode: forwards;

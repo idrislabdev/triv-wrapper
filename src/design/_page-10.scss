@@ -1,20 +1,43 @@
 .main-apps {
     &.page-10 {
+        background-color: #000;
         .triv-logo {
             opacity: 1;
         }
         .page-10-area {
             height: 100vh;
             position: relative;
-            padding: 150px 35px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary;
+            gap: 28px;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
                 opacity: 1;
+                margin-top: -100px;
+                @media #{$large-mobile} {
+                    width: 100vw;
+                }
+                @media #{$extra-small-mobile} {
+                    margin-top: -200px;
+                    padding: 0px 50px;
+
+                }
                 .text-greeting {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 30px;
+                    gap: 20px;
                     z-index: 4;
+                    @media #{$extra-small-mobile} {
+                        gap: 10px;
+    
+                    }
                     .coin-award {
                         width: 143.09px;
                         height: 143.09px;
@@ -55,10 +78,15 @@
             }
         
             .air-ballons {
-                position: fixed;
+                position: absolute;
                 bottom: 30px;
                 z-index: 3;
                 opacity: 1;
+                height: 260px;
+                @media #{$extra-small-mobile} {
+                    height: 208px;
+
+                }
             }
             
         }
@@ -66,9 +94,11 @@
         .cloud-bottom {
             &__left {
                 opacity: 1;
+                height: 146px;
             }
             &__right {
                 opacity: 1;
+                height: 130px;
             }
         }
 

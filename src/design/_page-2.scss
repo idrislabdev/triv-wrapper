@@ -1,5 +1,6 @@
 .main-apps {
     &.page-2 {
+        background-color: #000;
         .triv-logo {
             &.entrance {
                 animation: fadeIn 3s;
@@ -15,8 +16,21 @@
         .page-2-area {
             height: 100vh;
             position: relative;
-            padding: 150px 35px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $primary;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
+                padding: 0px 15px;
+                gap: 30px;
+                @media #{$extra-small-mobile} {
+                    padding: 0px 30px;
+                }
                 &.entrance {
                     animation: entranceTextPage 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;
@@ -86,8 +100,11 @@
         
             img {
                 &.plane {
-                    position: absolute;
-                    bottom: 20%;
+                    // position: fixed;
+                    // bottom: 20%;
+                    width: 200px;
+                    position: relative;
+                    left: 30px;
                     &.entrance {
                         animation: planeMove 300ms linear alternate;
                         animation-delay: 3000ms;
@@ -106,7 +123,9 @@
         }
 
         .cloud-bottom {
+            position: absolute;
             &__left {
+                height: 146px;
                 &.entrance {
                     animation: cloudEntranceLeft 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;
@@ -114,6 +133,7 @@
                }
             }
             &__right {
+                height: 130px;
                &.entrance {
                     animation: cloudEntranceRight 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;

@@ -1,5 +1,6 @@
 .main-apps {
     &.page-3 {
+        background-color: #000;
         .triv-logo {
             &.entrance {
                 animation: fadeIn 3s;
@@ -15,8 +16,23 @@
         .page-3-area {
             height: 100vh;
             position: relative;
-            padding: 150px 35px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $primary;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
+                padding: 0px 15px;
+                align-items: center;
+                z-index: 5;
+                margin-top: -150px;
+                @media #{$extra-small-mobile} {
+                    padding: 0px 45px;
+                }
                 &.entrance {
                     animation: textPageEntrance 2s ease-in-out;
                     -webkit-animation-fill-mode: forwards;
@@ -99,10 +115,11 @@
             }
         
             .air-ballon {
-                position: fixed;
-                bottom: 30px;
+                position: absolute;
+                bottom: 10%;
                 z-index: 3;
                 opacity: 0;
+                width: 200px;
                 &.entrance {
                     animation: airBallonEntrance 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;
@@ -122,6 +139,14 @@
                 
         .cloud-bottom {
             opacity: 1;
+            position: absolute;
+
+            &__left {
+                height: 146px;
+            }
+            &__right {
+                height: 130px;
+            }
         }   
 
         button {
@@ -171,11 +196,11 @@
 @keyframes airBallonEntrance {
     from {
         opacity: 0;
-        transform: translateY(0px);
+        transform: translateY(-10vh);
     }
     to { 
         opacity: 1;
-        transform: translateY(10%);
+        transform: translateY(0);
     }
 }
 

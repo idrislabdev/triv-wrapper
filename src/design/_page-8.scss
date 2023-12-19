@@ -1,6 +1,6 @@
 .main-apps {
     &.page-8 {
-        background-color: #CEEAF0;
+        background-color: #000;
         .triv-logo {
             opacity: 1;
             &.exit {
@@ -16,13 +16,24 @@
         .page-8-area {
             height: 100vh;
             position: relative;
-            padding: 150px 35px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            justify-content: center;
             align-items: center;
+            background-color: #CEEAF0;
+            gap: 28px;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
                 opacity: 0;
+                z-index: 1;
+                margin-top: -100px;
+                // min-width: 412px;
+                @media #{$extra-small-mobile} {
+                    margin-top: -40px;
+                }
                 h5 {
                     font-size: 20px;
                     line-height: 32px;
@@ -57,6 +68,10 @@
                 justify-content: center;
                 align-items: center;
                 gap: 24px;
+                @media #{$extra-small-mobile} {
+                   gap: 12px;
+                   margin-top: -30px;
+                }
                 h5 {
                     font-size: 20px;
                     font-weight: 500;
@@ -126,6 +141,10 @@
                     justify-content: center;
                     align-items: center;
                     gap: 16px;
+                    max-width: 300px;
+                    @media #{$extra-small-mobile} {
+                        gap: 4px;
+                     }
                     .double-quote {
                         background-image: url("../assets/double-quote.png");
                         width: 23px;
@@ -182,6 +201,8 @@
             &__left {
                 top: -10vh;
                 left: 45%;
+                height: 146px;
+
                 &.exit {
                     animation: fadeOut 400ms;
                     -webkit-animation: fadeOut 400ms;
@@ -195,6 +216,8 @@
             &__right {
                 top: -8vh;
                 right: 35%;
+                height: 130px;
+
                 &.exit {
                     animation: fadeOut 400ms;
                     -webkit-animation: fadeOut 400ms;
@@ -209,9 +232,11 @@
         }
 
         .coins-bg {
-            position: fixed;
+            position: absolute;
+            transform-origin: top;
             opacity: 1;
             bottom: 0;
+            width: 405px;
             &.exit {
                 animation: fadeOut 400ms;
                 -webkit-animation: fadeOut 400ms;

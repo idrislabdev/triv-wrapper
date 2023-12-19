@@ -1,6 +1,6 @@
 .main-apps {
     &.page-7 {
-        background-color: #CEEAF0;
+        background-color: #000;
         .triv-logo {
             &.entrance {
                 animation: logoEntrance 1s ease-in-out;
@@ -12,19 +12,38 @@
         .page-7-area {
             height: 100vh;
             position: relative;
-            padding: 150px 35px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            justify-content: center;
             align-items: center;
+            background-color: #CEEAF0;
+            gap: 28px;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
                 opacity: 0;
-                h5 {
-                    font-size: 20px;
-                    line-height: 32px;
-                    font-weight: 700;
-                    color: #040518;
+                padding: 0px 50px;
+                align-items: center;
+                z-index: 1;
+                margin-top: -100px;
+
+                @media #{$extra-small-mobile} {
+                    margin-top: -50px;
                 }
+                .text-greeting {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h5 {
+                        font-size: 20px;
+                        line-height: 32px;
+                        font-weight: 700;
+                        color: #040518;
+                    }
+                }
+
                 &.entrance {
                     animation: textGreetingEntrance 1s ease-in-out;
                     -webkit-animation-fill-mode: forwards;
@@ -105,17 +124,23 @@
             &__left {
                 top: -10vh;
                 left: 45%;
+                height: 146px;
+
             }
             &__right {
                 top: -8vh;
                 right: 35%;
+                height: 130px;
             }
         }
 
         .coins-bg {
-            position: fixed;
+            position: absolute;
+            transform-origin: top;
             opacity: 0;
             bottom: 0;
+            width: 405px;
+
             &.entrance {
                 animation: assetEntrance 1s ease-in-out;
                 -webkit-animation-fill-mode: forwards;

@@ -1,5 +1,6 @@
 .main-apps {
     &.page-6 {
+        background-color: #000;
         .coin-fly {
             &.exit {
                 animation: fadeOutRight 1s ease-in-out;
@@ -27,12 +28,21 @@
         .page-6-area {
             height: 100vh;
             position: relative;
-            padding: 150px 35px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
+            justify-content: space-around;
             align-items: center;
+            background-color: $primary;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
                 opacity: 1;
+                padding: 0px 15px;
+                align-items: center;
+                z-index: 1;
+                margin-top: -100px;
                 h5 {
                     font-size: 20px;
                     line-height: 32px;
@@ -123,7 +133,11 @@
                 z-index: 0;
                 opacity: 0;
                 bottom: 5%;
-                position: fixed;
+                position: absolute;
+                height: 244px;
+                @media #{$extra-small-mobile} {
+                    height: 222px;
+                }
                 &.entrance {
                     animation: jetEntrance 900ms linear alternate;
                     animation-delay: 1s;
@@ -142,13 +156,31 @@
 
         .cloud-bottom {
             opacity: 1;
+            position: absolute;
             transform-origin: top;
 
             &.exit {
                 animation: cloudExit 700ms linear alternate;
                 animation-fill-mode: forwards;
             }
-        }   
+
+            &__left {
+                height: 146px;
+            }
+            &__right {
+                height: 130px;
+            }
+        }  
+
+        // .cloud-bottom {
+        //     opacity: 1;
+        //     transform-origin: top;
+
+        //     &.exit {
+        //         animation: cloudExit 700ms linear alternate;
+        //         animation-fill-mode: forwards;
+        //     }
+        // }   
 
         button {
             &.entrance {

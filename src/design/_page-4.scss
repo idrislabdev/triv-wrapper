@@ -1,5 +1,6 @@
 .main-apps {
     &.page-4 {
+        background-color: #000;
         .triv-logo {
             &.entrance {
                 animation: fadeIn 3s;
@@ -15,11 +16,23 @@
         .page-4-area {
             height: 100vh;
             position: relative;
-            padding: 150px 35px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
+            justify-content: space-around;
             align-items: center;
+            background-color: $primary;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             .text-page {
+                padding: 0px 15px;
+                align-items: center;
+                z-index: 5;
+                margin-top: -150px;
+                @media #{$extra-small-mobile} {
+                    padding: 0px 30px;
+                }
                 h5 {
                     font-size: 20px;
                     line-height: 32px;
@@ -114,11 +127,11 @@
             }
         
             .alien {
-                z-index: 1;
-                opacity: 0;
-                width: 231px;
                 position: absolute;
-                bottom: 15%;
+                bottom: 20%;
+                z-index: 3;
+                opacity: 0;
+                width: 175px;
                 &.entrance {
                     animation: alienEntrance 900ms linear alternate;
                     animation-delay: 0s;
@@ -135,9 +148,18 @@
         
         }
 
+                
         .cloud-bottom {
             opacity: 1;
-        }   
+            position: absolute;
+
+            &__left {
+                height: 146px;
+            }
+            &__right {
+                height: 130px;
+            }
+        }  
 
         button {
             &.entrance {
