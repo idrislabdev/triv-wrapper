@@ -22,6 +22,7 @@
             justify-content: space-around;
             align-items: center;
             background-color: $primary;
+            width: 470px;
             @media #{$large-mobile} {
                 width: 100vw;
             }

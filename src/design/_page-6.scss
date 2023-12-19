@@ -34,6 +34,7 @@
             justify-content: space-around;
             align-items: center;
             background-color: $primary;
+            width: 470px;
             @media #{$large-mobile} {
                 width: 100vw;
             }
@@ -207,6 +208,10 @@
             position: fixed;
             bottom: -100vh;
             z-index: 1;
+            width: 470px;
+            @media #{$large-mobile} {
+                width: 100vw;
+            }
             &.exit {
                 &.exit {
                     animation: slideExit 700ms linear alternate;
