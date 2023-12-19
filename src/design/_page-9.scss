@@ -29,6 +29,8 @@
             .text-page {
                 opacity: 1;
                 margin-top: -100px;
+                z-index: 5;
+                gap: 0px;
                 @media #{$large-mobile} {
                     width: 100vw;
                 }
