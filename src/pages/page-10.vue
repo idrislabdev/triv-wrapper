@@ -6,7 +6,7 @@
           <div class="text-greeting entrance">
             <img alt="Coin Award" src="../assets/coin-award.png" class="coin-award">
             <h5>Undang teman dan dapatkan special gift Ethereum!</h5>
-            <button type="button" class="btn btn__light entrance">Undang Temang Skarang</button>
+            <button type="button" class="btn btn__light entrance">Undang Teman Sekarang</button>
           </div>
         </div>
         <img alt="Air Ballons Img" src="../assets/air-ballons.png" class="air-ballons">    
