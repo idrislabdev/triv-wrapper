@@ -21,10 +21,11 @@
             .text-page {
                 opacity: 1;
                 margin-top: -100px;
+                padding: 0px 15px;
                 @media #{$large-mobile} {
                     width: 100vw;
                 }
-                @media #{$extra-small-mobile} {
+                @media #{$extra-small-mobile, $small-height} {
                     margin-top: -200px;
                     padding: 0px 50px;
 
@@ -35,7 +36,7 @@
                     align-items: center;
                     gap: 20px;
                     z-index: 4;
-                    @media #{$extra-small-mobile} {
+                    @media #{$extra-small-mobile, $small-height} {
                         gap: 10px;
     
                     }
@@ -84,7 +85,7 @@
                 z-index: 3;
                 opacity: 1;
                 height: 260px;
-                @media #{$extra-small-mobile} {
+                @media #{$extra-small-mobile, $small-height} {
                     height: 208px;
 
                 }

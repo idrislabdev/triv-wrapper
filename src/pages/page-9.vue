@@ -1,7 +1,7 @@
 <template>
     <div class="main-apps page-9">
       <div class="page-9-area">
-        <img alt="Triv logo" src="../assets/logo-triv.png" class="triv-logo">
+        <img alt="Triv logo" src="../assets/logo-triv-white.svg" class="triv-logo">
         <div class="text-page">
           <div class="text-greeting">
             <h5>Great Job</h5>

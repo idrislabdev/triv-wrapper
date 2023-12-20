@@ -2,7 +2,7 @@
     <div class="main-apps page-6">
       <div class="page-6-area">
         <coin-fly />
-        <img alt="Triv logo" src="../assets/logo-triv.png" class="triv-logo">
+        <img alt="Triv logo" src="../assets/logo-triv-white.svg" class="triv-logo">
         <div class="text-page">
           <div class="text-greeting">
             <div class="text-award">

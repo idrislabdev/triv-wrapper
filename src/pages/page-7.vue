@@ -3,7 +3,7 @@
       <div class="page-7-area">
         <img alt="cloud top right" src="../assets/cloud-right.png" class="cloud-top cloud-top__right">
         <img alt="cloud top left" src="../assets/cloud-left.png" class="cloud-top cloud-top__left">   
-        <img alt="Triv logo" src="../assets/logo-triv-blue.png" class="triv-logo">
+        <img alt="Triv logo" src="../assets/logo-triv-blue.svg" class="triv-logo">
         <div class="text-page">
           <div class="text-greeting">
             <h5>Ini 3 aset favorit kamu sepanjang 2023</h5>

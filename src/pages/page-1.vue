@@ -1,7 +1,7 @@
 <template>
     <div class="main-apps page-1">
       <div class="page-1-area">
-        <img alt="Triv logo" src="../assets/logo-triv.png" class="triv-logo ">
+        <img alt="Triv logo" src="../assets/logo-triv-white.svg" class="triv-logo ">
         <img alt="Triv logo" src="../assets/cloud-left.png" class="cloud cloud__left ">
         <div class="text-page ">
           <h5>Yuk Tonton Perjalanan Investasimu </h5>

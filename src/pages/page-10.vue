@@ -1,7 +1,7 @@
 <template>
     <div class="main-apps page-10">
       <div class="page-10-area">
-        <img alt="Triv logo" src="../assets/logo-triv.png" class="triv-logo">
+        <img alt="Triv logo" src="../assets/logo-triv-white.svg" class="triv-logo">
         <div class="text-page">
           <div class="text-greeting entrance">
             <img alt="Coin Award" src="../assets/coin-award.png" class="coin-award">
